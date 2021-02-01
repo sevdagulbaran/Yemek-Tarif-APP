@@ -1,0 +1,17 @@
+<ion-view view-title="ACIKTIM">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input yuvarla">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Ne aramak istersin? " ng-model = "kelime"> 
+      </label>
+    </div>
+    <div class="list">
+      <a class="item item-avatar" ng-repeat="yemek  in yemekler | filter: kelime as sonuc" href="#/app/playlists/{{yemek.no}}">
+      <img src="{{yemek.logo}}">
+      <h2>{{yemek.adi}}</h2>
+      <p>{{yemek.kategori}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
